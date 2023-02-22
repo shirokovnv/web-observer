@@ -1,0 +1,13 @@
+# ---------------------------------------------------------------------------------------------------
+# Site settings
+# ---------------------------------------------------------------------------------------------------
+
+# Hint: Define any number of blocks with params, declared below
+sites:
+  - url: https://foo.com
+    code: 200
+    interval: 10m
+
+  - url: https://bar.com
+    code: 200
+    interval: 15m
