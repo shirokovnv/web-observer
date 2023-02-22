@@ -2,11 +2,11 @@
 
 **Lightweight http resource pinger, written in [Go][link-go]**
 
-- Periodically checks http response statuses for your webservices.
+- Periodically checks http response statuses for your webservices
 
-- Sends slack notification when desired code differs from the http response.
+- Sends slack notification when desired code differs from the http response
 
-- Can be deployed and served as [systemd unit][link-systemd].
+- Can be deployed and served as [systemd unit][link-systemd]
 
 ## Dependencies
 
