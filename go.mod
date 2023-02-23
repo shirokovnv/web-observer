@@ -1,4 +1,4 @@
-module go/webobs
+module github.com/shirokovnv/web-observer
 
 go 1.19
 
