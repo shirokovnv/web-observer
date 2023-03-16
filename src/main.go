@@ -3,11 +3,11 @@ package main
 import (
 	"flag"
 	"fmt"
-	"go/webobs/src/client"
 	"log"
 	"time"
 
 	"github.com/go-co-op/gocron"
+	"github.com/shirokovnv/web-observer/src/client"
 	"gopkg.in/yaml.v3"
 )
 
