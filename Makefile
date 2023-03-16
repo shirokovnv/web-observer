@@ -4,10 +4,10 @@ include .env.example
 export
 
 BUILD := ./build/webobs
-LDFLAGS := "-X 'main.YmlSiteConfig=$(SITES)' -X 'main.YmlSlackConfig=$(SLACK)'"
 SITES := `cat ./config/sites.yml`
 SLACK := `cat ./config/slack.yml`
 SOURCE := ./src
+LDFLAGS := "-X 'main.YmlSiteConfig=$(SITES)' -X 'main.YmlSlackConfig=$(SLACK)'"
 
 .PHONY : help init format build run
 .DEFAULT_GOAL : help
