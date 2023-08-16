@@ -1,8 +1,12 @@
 package client
 
 import (
+	"context"
 	"net/http"
+	"time"
 )
+
+const DefaultHttpReqTimeout = 30 * time.Second
 
 type Site struct {
 	URL      string `yaml:"url"`
@@ -15,7 +19,10 @@ type SiteConfig struct {
 }
 
 func (site Site) CheckUrlStatus() (int, error) {
-	req, err := http.NewRequest(http.MethodGet, site.URL, nil)
+	ctx, cncl := context.WithTimeout(context.Background(), DefaultHttpReqTimeout)
+	defer cncl()
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, site.URL, nil)
 	if err != nil {
 		return 0, err
 	}
