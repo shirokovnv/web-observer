@@ -1,6 +1,6 @@
 #!/usr/bin/make
 
-include .env.example
+include .env
 export
 
 BUILD := ./build/webobs
@@ -9,7 +9,7 @@ SLACK := `cat ./config/slack.yml`
 SOURCE := ./src
 LDFLAGS := "-X 'main.YmlSiteConfig=$(SITES)' -X 'main.YmlSlackConfig=$(SLACK)'"
 
-.PHONY : help init format build run
+.PHONY : help init format build run test
 .DEFAULT_GOAL : help
 
 # HELP =================================================================================================================
@@ -29,3 +29,6 @@ build: ### Build binary
 
 run: ### Run project locally
 	go run -ldflags $(LDFLAGS) $(SOURCE)
+
+test: ### Run tests
+	go test -v ./...
