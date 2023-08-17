@@ -10,7 +10,7 @@
 
 ## Dependencies
 
-- [Go][link-go] 1.19 or higher
+- [Go][link-go] >= 1.19
 - [Make][link-make]
 
 ## Project setup
