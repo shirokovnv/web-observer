@@ -26,7 +26,7 @@
 
 ## License
 
-MIT. Please see the [license file](LICENSE.md) for more information.
+MIT. Please see the [license file](license.md) for more information.
 
 [link-go]: https://go.dev/
 [link-make]: https://www.gnu.org/software/make/manual/make.html
